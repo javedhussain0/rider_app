@@ -251,7 +251,7 @@ export default function Nav({ user }) {
       <MobileMenu open={mobileOpen}>
         <MobileNavLink onClick={() => handleNavigation("/")}>Home</MobileNavLink>
         <MobileNavLink onClick={() => handleNavigation("/Help")}>Help</MobileNavLink>
-        <MobileNavLink onClick={() => handleNavigation("/Rider")}>Rider</MobileNavLink>
+        <MobileNavLink onClick={() => handleNavigation("/RiderInfo")}>Rider</MobileNavLink>
         <MobileNavLink onClick={() => handleNavigation("/About")}>About</MobileNavLink>
       </MobileMenu>
     </>

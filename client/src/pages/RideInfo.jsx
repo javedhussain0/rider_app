@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import Logo from "../assets/logo/Logo.png";
 import MapComponent from "../components/MapComponents";
 import Footer from "../components/Footer";
+import Home from "../pages/Home"
 
 const Container = styled.div`
   margin: auto;
@@ -162,10 +164,16 @@ const NavList = styled.ul`
 `;
 
 const MiniNav = ({ activeTab, setActiveTab }) => {
+  const navigate = useNavigate();
+
   return (
     <MiniNavContainer>
       <LogoImg src={Logo} alt="logo" />
       <NavList>
+        <li onClick={()=>navigate("/")}
+        >
+          Home
+        </li>
         <li 
           className={activeTab === 'ride' ? 'active' : ''}
           onClick={() => setActiveTab('ride')}
@@ -178,6 +186,7 @@ const MiniNav = ({ activeTab, setActiveTab }) => {
         >
           Rental
         </li>
+        
       </NavList>
     </MiniNavContainer>
   );

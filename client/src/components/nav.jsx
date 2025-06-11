@@ -115,7 +115,10 @@ const UserControls = styled.div`
   align-items: center;
   gap: 16px;
 `;
+const Register = styled.div`
 
+
+`
 export default function Nav({ user }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
@@ -143,7 +146,7 @@ export default function Nav({ user }) {
           <NavLink onClick={() => navigate("/")}>Home</NavLink>
           <NavLink onClick={() => navigate("/Help")}>Help</NavLink>
           <NavLink onClick={() => navigate("/RiderInfo")}>Rider</NavLink>
-          <NavLink onClick={() => navigate("/About")}>About</NavLink>
+          <NavLink onClick={() => navigate("SignIn")}>Login</NavLink>
         </NavLinks>
 
         <UserControls>
@@ -198,6 +201,9 @@ export default function Nav({ user }) {
             transformOrigin={{ horizontal: 'right', vertical: 'top' }}
             anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
           >
+            <Register onClick={()=>navigate("/login")}>
+              Login
+            </Register>
             {user ? (
               <>
                 <MenuItem disabled sx={{ color: '#4a5568', fontWeight: '600' }}>
@@ -252,7 +258,6 @@ export default function Nav({ user }) {
         <MobileNavLink onClick={() => handleNavigation("/")}>Home</MobileNavLink>
         <MobileNavLink onClick={() => handleNavigation("/Help")}>Help</MobileNavLink>
         <MobileNavLink onClick={() => handleNavigation("/RiderInfo")}>Rider</MobileNavLink>
-        <MobileNavLink onClick={() => handleNavigation("/About")}>About</MobileNavLink>
       </MobileMenu>
     </>
   );

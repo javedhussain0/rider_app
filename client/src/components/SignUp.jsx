@@ -22,6 +22,12 @@ export default function SignUp() {
         <TextField fullWidth label="Name" name="name" margin="normal" onChange={handleChange} />
         <TextField fullWidth label="Email" name="email" type="email" margin="normal" onChange={handleChange} />
         <TextField fullWidth label="Password" name="password" type="password" margin="normal" onChange={handleChange} />
+        <role>
+          <Typography variant="body2" color="textSecondary" sx={{ mt: 1 }}>
+            Already have an account? <a href="/signin">Sign In</a>
+          </Typography>
+          
+        </role>
         {error && <Typography color="error">{error}</Typography>}
         <Button type="submit" variant="contained" fullWidth sx={{ mt: 2 }}>
           {isLoading ? <CircularProgress size={24} /> : 'Register'}

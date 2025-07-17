@@ -13,6 +13,7 @@ import {
 import { styled } from '@mui/material/styles';
 import LockIcon from '@mui/icons-material/Lock';
 import PersonIcon from '@mui/icons-material/Person';
+import Nav from "../components/nav"
 
 const sideImage = 'https://lh3.googleusercontent.com/aida-public/AB6AXuDYtscEMI0JxlZuSiuHrow4TvnIzXyIOGwdMew0_DtKyti3xwu_Sv8R5an7EhO7bM6rsGyygL_luy7zpn0bmJXaJuQb2BLtuSdNEPHSq1Va_FZyOHo6G547BwbHWt-SCm5QLQAMOhBzVVxX6w9qcD2CyaJMl_9wxCsfixRNnVrf5PIFN5yUfJfBJ4tl3zgXPBnDZ0XjpwX7TatNp7H-QO2lmCRa3FyXxervHic-Rs7qQCeJz6TB7Y2sQ_yqbvgOM3sMsg_xOxbO-8o';
 
@@ -100,6 +101,7 @@ const SignInPage = () => {
 
   return (
     <ThemeProvider theme={theme}>
+      <Nav />
       <Box
         sx={{
           display: 'flex',

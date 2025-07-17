@@ -9,6 +9,7 @@ import {
   createTheme,
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import Nav from '../components/nav';
 
 const sideImage =
   'https://lh3.googleusercontent.com/aida-public/AB6AXuBgjgAaUTFpMK2AXItbaWv80dvNtC08f2GBycrTi6lfwco_t-qEy9oFrAG-3VqRuf6Rv8MgQmzH9m8iveurFBph_u9wDwRkRvNj3DhTRFTrFtwjVhVXWw5RPo6oTGOGS0qdI95NrDGNcP_yOVZE5sHPvsJRXAAgkinNZYHRG3UvMplhzvFEeuSnMMdFARjiCRQI08Jtu5UKWbzs7OEAPqTe-WdE21zNP3YMduYpWtj9F-oxcMipSLYz40EvYWw-KzmRHXjMA0idLII';
@@ -93,6 +94,7 @@ const SignUp = () => {
 
   return (
     <ThemeProvider theme={theme}>
+      <Nav />
       <Box
         sx={{
           display: 'flex',

@@ -19,7 +19,7 @@ const Home = () =>{
             <Hero/>
             <Poster/>
             <Footer/>
-        </Container>
+           </Container>
     )
 }
 
